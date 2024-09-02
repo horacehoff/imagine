@@ -10,6 +10,7 @@ image_path = "./test_images/stars.jpg"
 # Lossy is highly recommended
 lossless = False
 
+# 34b model is also an option but is way more demanding regarding processing power
 model = "llava:13b"
 
 
@@ -33,7 +34,6 @@ except:
 
 print("GENERATING PROMPT...")
 response = ollama.chat(
-    # 34b model is also an option but is way more demanding regarding processing power
     model=model,
     messages=[
         {
