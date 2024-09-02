@@ -2,8 +2,19 @@
 The goal is to take as an input an image and output a prompt
 """
 
-import ollama
+
 from PIL import Image
+import ollama
+try:
+	ollama.chat()
+except:
+	print("INITIALIZING OLLAMA...")
+	import subprocess, time
+	ollama_proc = subprocess.Popen(["ollama","run","llava:13b"])
+	time.sleep(1)
+	ollama_proc.kill()
+
+
 
 image_path = "./test_images/stars.jpg"
 # Lossy is highly recommended
