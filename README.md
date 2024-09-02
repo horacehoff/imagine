@@ -9,6 +9,7 @@ The models currently used are LLaVA (13b) for computing the reverse prompt, and 
 ### Installation
 You need to have [Ollama](https://ollama.com/download) installed on your computer.
 ```sh
+ollama run llava:13b
 pip install -r requirements.txt
 ```
 
