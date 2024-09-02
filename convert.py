@@ -10,6 +10,7 @@ lossless = False
 
 print("GENERATING PROMPT....")
 response = ollama.chat(
+	# 34b model is also an option but is way more demanding regarding processing power
 	model="llava:13b",
 	messages=[
 		{
