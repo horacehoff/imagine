@@ -4,7 +4,8 @@ The goal is to take as an input an image and output a prompt
 import ollama
 from PIL import Image
 
-image_path = "./test.jpeg"
+image_path = "./test_images/stars.jpg"
+# Lossy is highly recommended
 lossless = False
 
 print("GENERATING PROMPT....")
@@ -24,7 +25,8 @@ description = response['message']['content']
 print("RETRIEVING PALETTE...")
 colors = []
 img = Image.open(image_path)
-img = img.quantize(colors=100).convert("RGB")
+if not lossless:
+	img = img.quantize(colors=100).convert("RGB")
 
 for x in range(img.width):
 	for y in range(img.height):
