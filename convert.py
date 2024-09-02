@@ -1,6 +1,7 @@
 """
 The goal is to take as an input an image and output a prompt
 """
+
 import ollama
 from PIL import Image
 
@@ -15,7 +16,7 @@ response = ollama.chat(
 	messages=[
 		{
 			'role': 'user',
-			'content': 'Provide a highly detailed description of the image, starting with a general overview of the scene, including all main elements and their precise and exact spatial relationships. Describe the foreground and background in full detail, specifying the exact and precise positions, sizes, and orientations of objects, subjects, or entities. Include a comprehensive breakdown of the color palette, noting specific hues, shades, and gradients, as well as any lighting effects such as shadows, highlights, and reflections, with their sources. Explain the textures and patterns on all surfaces, describing whether they are smooth, rough, shiny, matte, or otherwise distinct, and identify the materials and their physical appearance. Detail the environment or setting, including natural or man-made elements like trees, buildings, skies, landscapes, and any relevant weather conditions. If there are people or animals present, provide a full description of their appearance, including facial expressions, clothing, poses, and notable features like hair, fur, or skin tone. Comment on the artistic style or technique used, such as realism, impressionism, or abstract qualities, and mention any unique artistic effects or stylizations. Describe any text, symbols, or intricate details within the image, and how these contribute to the overall composition and meaning. Finally, discuss the overall composition and balance of the image, explaining how the elements are arranged, including composition, balance, symmetry, and focal points, and how these elements work together to create a cohesive image that can be faithfully reproduced. Do not use metaphores, use only facts, and be as detailed as possible, as precise and mathematical as possible. Remember that an AI model must be able to generate the image from your description, so be as clear and detailed as possible. Think very hard before qualifying an object, as it may not be what it looks like, as such it is simpler for you to describe objects using shapes and colors, and thus be more precise.',
+			'content': 'provide a highly detailed description for this photo without interpretations. Skip using word "image". No interpretations.',
 			'images': [image_path]
 		}
 	]
