@@ -1,22 +1,16 @@
 """
 The goal is to take as an input an image and output a prompt
 """
-
-
+from PIL import Image
+import ollama
 
 
 image_path = "./test_images/stars.jpg"
-
 # Lossy is highly recommended
 lossless = False
-
 # 34b model is also an option but is way more demanding regarding processing power
 model = "llava:13b"
 
-
-
-from PIL import Image
-import ollama
 
 try:
     ollama.chat(model=model)
@@ -27,9 +21,6 @@ except:
     ollama_proc = subprocess.Popen(["ollama", "run", model])
     time.sleep(1)
     ollama_proc.kill()
-
-
-
 
 
 print("GENERATING PROMPT...")
