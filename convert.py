@@ -29,7 +29,7 @@ response = ollama.chat(
     messages=[
         {
             'role': 'user',
-            'content': 'Provide a detailed description for this photo without interpretations. Skip using word "image". No interpretations.',
+            'content': 'Provide a very detailed and precise description for this photo without interpretations or assumptions.',
             'images': [image_path]
         }
     ]
