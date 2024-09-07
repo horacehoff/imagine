@@ -5,7 +5,7 @@ from PIL import Image
 import ollama
 
 
-image_path = "./test_images/stars.jpg"
+image_path = "./test_images/rubixcube.jpg"
 # Lossy is highly recommended
 lossless = False
 # 34b model is also an option but is way more demanding regarding processing power
@@ -29,7 +29,7 @@ response = ollama.chat(
     messages=[
         {
             'role': 'user',
-            'content': 'Provide a very detailed and precise description for this photo without interpretations or assumptions.',
+            'content': 'Provide a very detailed and precise analysis of the image without assumptions or interpretations. Do not qualify objects, people, or actions. If needed, be as precise as to describe individual pixels and their position. Be exhaustive and detailed. Please provide all the required details for a perfect reproduction, describe the image as if I needed to recreate it from scratch using only your description.',
             'images': [image_path]
         }
     ]
