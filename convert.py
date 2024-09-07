@@ -2,6 +2,7 @@
 The goal is to take as an input an image and output a prompt
 """
 from PIL import Image
+import base64
 import ollama
 
 
@@ -9,7 +10,7 @@ image_path = "./test_images/rubixcube.jpg"
 # Lossy is highly recommended
 lossless = False
 # 34b model is also an option but is way more demanding regarding processing power
-model = "llava:13b"
+model = "minicpm"
 
 
 try:
@@ -21,6 +22,18 @@ except:
     ollama_proc = subprocess.Popen(["ollama", "run", model])
     time.sleep(1)
     ollama_proc.kill()
+
+
+# image = Image.open(image_path).convert('RGB')
+# imag = None
+# with open(image_path, 'r') as f:
+#     imag = f.read()
+#
+# print(imag)
+# px = []
+# for x in range(image.width):
+#     for y in range(image.height):
+#         px.append([x, y, image.getpixel((x, y))])
 
 
 print("GENERATING PROMPT...")
