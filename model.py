@@ -5,7 +5,7 @@ from PIL import Image
 
 
 
-image_path = "./test_images/rubixcube.jpg"
+image_path = "./test_images/moon.jpg"
 # Lossy is highly recommended
 lossless = False
 
@@ -20,12 +20,11 @@ chat_handler = MiniCPMv26ChatHandler(clip_model_path="model/minicpm-v2_6/mmproj-
 llm = Llama(
     model_path="model/minicpm-v2_6/ggml-model-Q8_0.gguf",
     chat_handler=chat_handler,
-    n_ctx=2048,  # n_ctx should be increased to accommodate the image embedding
+    n_ctx=4906,  # n_ctx should be increased to accommodate the image embedding
     verbose=True
 )
 
-file_path = 'test_images/rubixcube.jpg'
-data_uri = image_to_base64_data_uri(file_path)
+data_uri = image_to_base64_data_uri(image_path)
 
 print("GENERATING PROMPT...")
 description = llm.create_chat_completion(
@@ -34,7 +33,7 @@ description = llm.create_chat_completion(
         {
             "role": "user",
             "content": [
-                {"type": "text", "text": "Do an exhaustive reverse prompt of this image. Basically, create a prompt of this image, allowing any AI model to reproduce this image exactly, but don't do instructions, do rather a description."},
+                {"type": "text", "text": "Do an exhaustive analysis and description of the image, without assumptions or deductions or metaphors, just the facts, be exhaustive."},
                 {"type": "image_url", "image_url": {
                     "url": data_uri}}
             ]
