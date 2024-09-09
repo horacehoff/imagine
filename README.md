@@ -2,9 +2,12 @@
 An experimental image format whose goal is to demonstrate the ability of an AI to do a reverse prompt from an image and then reconstruct the image faithfully using only the prompt of the previous AI.
 
 ### Models
-> This project is very early and, as such, models are subject to change
+> This project is very early in development and, as such, models are subject to change. Below are the instructions/required files to download the models and use them in the project.
 
-The models currently used are LLaVA (13b) for computing the reverse prompt, and Flux/Stable Diffusion (haven't decided yet) for generating the output image
+#### MiniCPM-v2.6
+- 'model/minicpm-v2_6/mmproj-model-f16.gguf'\
+- 'model/minicpm-v2_6/ggml-model-Q8_0.gguf' (or any other quantization you prefer)\
+[MiniCPM repository](https://huggingface.co/openbmb/MiniCPM-V-2_6-gguf/tree/main)
 
 ### Installation
 You need to have [Ollama](https://ollama.com/download) installed on your computer.
