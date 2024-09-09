@@ -10,9 +10,8 @@ An experimental image format whose goal is to demonstrate the ability of an AI t
 [MiniCPM repository](https://huggingface.co/openbmb/MiniCPM-V-2_6-gguf/tree/main)
 
 ### Installation
-You need to have [Ollama](https://ollama.com/download) installed on your computer.
+You need to install [Pytorch](https://pytorch.org/get-started/locally/) on your system. Then: 
 ```sh
-ollama run llava:13b
 pip install -r requirements.txt
 ```
 
