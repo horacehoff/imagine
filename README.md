@@ -5,7 +5,7 @@ An experimental image format whose goal is to demonstrate the ability of an AI t
 > This project is very early in development and, as such, models are subject to change. Below are the instructions/required files to download the models and use them in the project.
 
 #### MiniCPM-v2.6
-- 'model/minicpm-v2_6/mmproj-model-f16.gguf'\
+- 'model/minicpm-v2_6/mmproj-model-f16.gguf'
 - 'model/minicpm-v2_6/ggml-model-Q8_0.gguf' (or any other quantization you prefer)\
 [MiniCPM repository](https://huggingface.co/openbmb/MiniCPM-V-2_6-gguf/tree/main)
 
