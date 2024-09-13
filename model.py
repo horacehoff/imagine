@@ -33,12 +33,13 @@ description = llm.create_chat_completion(
         {
             "role": "user",
             "content": [
-                {"type": "text", "text": "Do an exhaustive analysis and description of the image, without assumptions or deductions or metaphors, just the facts, be exhaustive. For example, specify the size of objects, their nature, their position, so as to be able to describe the image as faithfully as possible."},
+                {"type": "text", "text": "Can you describe super faithfully to me please ? I want to reproduce it using only your description and as such could you describe everything, every detail please ?"},
                 {"type": "image_url", "image_url": {
                     "url": data_uri}}
             ]
         }
-    ]
+    ],
+    temperature=1
 )["choices"][0]["message"]["content"]
 print(description)
 
