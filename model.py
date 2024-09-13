@@ -33,13 +33,14 @@ description = llm.create_chat_completion(
         {
             "role": "user",
             "content": [
-                {"type": "text", "text": "Can you describe super faithfully to me please ? I want to reproduce it using only your description and as such could you describe everything, every detail please ?"},
+                {"type": "text", "text": "Can you describe super faithfully to me in english please ? I want to reproduce it using only your description and as such could you describe everything, every detail please ?"},
                 {"type": "image_url", "image_url": {
                     "url": data_uri}}
             ]
         }
     ],
-    temperature=1
+    temperature=0.5,
+    repeat_penalty=0.5
 )["choices"][0]["message"]["content"]
 print(description)
 
