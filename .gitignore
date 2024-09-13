@@ -2,3 +2,4 @@ model/minicpm-v2_6/*
 llama.log
 test.imagine
 .cadence
+.env
