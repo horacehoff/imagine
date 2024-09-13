@@ -29,18 +29,17 @@ data_uri = image_to_base64_data_uri(image_path)
 print("GENERATING PROMPT...")
 description = llm.create_chat_completion(
     messages=[
-        {"role": "system", "content": "You are an assistant who perfectly describes images."},
+        {"role": "system", "content": "You are MiniCPMv-2.6, an image description model. Your task is to provide a precise and factual description of the given image. Describe the image by specifying all observable elements including: Objects and their spatial relationships, Colors and textures, Sizes and shapes, Positions and orientations, Any textual or numerical data present, Avoid assumptions, interpretations, or metaphors. Your description should be a direct and unambiguous account of what is visually present in the image."},
         {
             "role": "user",
             "content": [
-                {"type": "text", "text": "Can you describe super faithfully to me in english please ? I want to reproduce it using only your description and as such could you describe everything, every detail please ?"},
+                {"type": "text", "text": "Please provide a detailed and factual description of the image. Include precise information about the objects, their spatial arrangement, colors, sizes, shapes, and any text or numbers present. Ensure your description is accurate and objective, avoiding any assumptions or interpretations."},
                 {"type": "image_url", "image_url": {
                     "url": data_uri}}
             ]
         }
     ],
-    temperature=0.5,
-    repeat_penalty=0.5
+    temperature=0.1,
 )["choices"][0]["message"]["content"]
 print(description)
 
