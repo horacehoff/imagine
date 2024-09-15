@@ -20,7 +20,8 @@ llm = Llama(
     model_path="model/minicpm-v2_6/ggml-model-Q8_0.gguf",
     chat_handler=chat_handler,
     n_ctx=4906,  # n_ctx should be increased to accommodate the image embedding
-    verbose=True
+    verbose=True,
+    n_threads=8
 )
 
 data_uri = image_to_base64_data_uri(image_path)
