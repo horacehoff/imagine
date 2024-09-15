@@ -26,11 +26,14 @@ llm = Llama(
     chat_handler=chat_handler,
     n_ctx=4906,  # n_ctx should be increased to accommodate the image embedding
     verbose=True,
-    # n_threads=16,
-
+    n_threads=16,
 )
 
-#83 seconds with 16 cores
+
+#114 seconds with threads not specified
+#126 seconds with 8 threads
+#83 seconds with 16 threads
+#144 seconds with 24 threads
 
 data_uri = image_to_base64_data_uri(image_path)
 
