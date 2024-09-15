@@ -7,20 +7,40 @@ pipe.to("cuda")
 pipe.enable_xformers_memory_efficient_attention()
 
 prompt = """
-The image depicts a night sky with a prominent celestial body, the moon, in the upper central portion. The moon is captured in a phase where it is partially illuminated, showing a crescent shape with a significant portion of its surface visible. The surface of the moon is detailed, with various craters and maria (lunar plains) discernible, indicating its rugged and uneven terrain. The moon is set against a stark black background, which suggests that the photograph was taken during the night when the sky is dark.
+The image depicts a celestial body, specifically the moon, in a night sky. Here is a detailed description based on the elements present in the image:
 
-Spatially, the moon is centrally located in the image, occupying a significant portion of the frame. There are no other objects or celestial bodies visible in the image, placing the entire focus on the moon. The moon's orientation is such that it appears to be slightly tilted, with the left side of the crescent being more illuminated than the right side.
+1. **Objects and Elements**:
+   - The primary object in the image is the moon, which is visible in a crescent phase. The moon appears to be in the upper central part of the image, occupying a significant portion of the frame.
+   - The background is entirely black, indicating that the photo was taken during nighttime or in a dark environment.
 
-The colors in the image are monochromatic, with the moon's surface appearing in shades of gray against the black backdrop of the night sky. The texture of the moon's surface is detailed and varied, with different shades indicating the presence of craters and other lunar features.
+2. **Spatial Arrangement**:
+   - The moon is centrally positioned in the image, with ample dark space surrounding it. There are no other objects or celestial bodies visible in the immediate vicinity of the moon.
 
-There are no discernible sizes or dimensions provided in the image, as the moon's actual size is not visible. However, it is clear that the moon is the largest object in the frame, and its crescent shape suggests it is not at full or new moon, but rather in a phase where only a portion of the moon is visible from Earth.
+3. **Orientation and Rotation**:
+   - The moon is oriented such that the left side of the image shows a darker portion, indicating the shadowed side, while the right side shows a lighter portion, indicating the illuminated side. The crescent shape suggests that the moon is in a waxing or waning phase.
 
-The shapes in the image are primarily the crescent shape of the moon, with its surface showing circular and oval forms due to the craters and maria. The background is a uniform black, providing a high contrast to the moon's grayish tones.
+4. **Colors**:
+   - The moon is predominantly white with varying shades of gray, indicating different levels of illumination and shadow. The surface of the moon shows some texture, with craters and maria (dark plains) visible.
 
-There is no text or numerical data present in the image, and the context is limited to the natural phenomenon of the moon in the night sky. The lighting conditions are such that the moon is the primary source of light in the image, illuminating its surface and casting subtle shadows within the craters. The shadows add depth to the moon's surface, highlighting the texture and topography.
+5. **Sizes and Dimensions**:
+   - The moon appears to be of a size that is typical for a full moon, but since it is only partially visible, it is not possible to determine its exact diameter. The moon's size is relative to the black background, which provides no scale reference.
 
-In summary, the image is a clear and detailed photograph of a partially illuminated moon in the night sky, with a focus on the moon's surface features and the stark contrast between the moon and the dark background. -- The RGB colors you must use in the image are the following: [(0, 0, 0), (1, 1, 1), (2, 2, 2), (0, 2, 0), (0, 2, 1), (0, 1, 0), (1, 1, 0), (3, 3, 3), (2, 2, 0), (3, 3, 1), (1, 1, 3), (2, 0, 1), (2, 3, 0), (3, 2, 0), (1, 3, 0), (4, 4, 2), (5, 5, 3), (6, 6, 4), (4, 4, 4), (7, 7, 5), (3, 5, 1), (4, 7, 3), (6, 8, 4), (8, 8, 6), (7, 9, 5), (4, 4, 0), (6, 6, 0), (7, 6, 3), (9, 9, 7), (2, 2, 4), (3, 3, 5), (5, 5, 5), (10, 10, 8), (6, 6, 6), (7, 7, 7), (8, 8, 8), (8, 9, 4), (9, 11, 8), (9, 9, 9), (10, 10, 10), (11, 8, 8), (8, 10, 7), (10, 13, 10), (11, 11, 9), (11, 11, 11), (11, 14, 10), (12, 12, 10), (13, 14, 11), (14, 15, 12), (11, 12, 14), (16, 16, 13), (22, 24, 21), (0, 2, 3), (34, 35, 33), (43, 44, 42), (55, 57, 56), (66, 68, 67), (72, 74, 73), (81, 82, 81), (96, 97, 96), (110, 111, 110), (127, 128, 128), (138, 139, 139), (144, 144, 144), (147, 149, 148), (152, 154, 153), (158, 159, 158), (164, 165, 164), (169, 170, 169), (162, 163, 161), (134, 135, 135), (117, 119, 119), (5, 5, 7), (167, 167, 166), (173, 174, 172), (178, 179, 177), (184, 185, 183), (189, 190, 188), (194, 195, 193), (199, 199, 197), (197, 197, 194), (200, 202, 199), (12, 12, 6), (203, 204, 201), (131, 132, 131), (207, 208, 205), (122, 123, 123), (216, 216, 213), (3, 4, 0), (9, 8, 2), (10, 10, 1), (3, 3, 0), (6, 4, 1), (7, 7, 0), (10, 6, 1), (3, 1, 1), (5, 5, 0), (4, 2, 3), (6, 5, 3), (0, 0, 2)]
-"""
+6. **Shapes**:
+   - The shape of the moon is irregular, with a smooth curve along the crescent edge. The surface features such as craters and maria create a textured appearance.
+
+7. **Text and Numbers**:
+   - There is no visible text or numerical data present in the image.
+
+8. **Background and Context**:
+   - The background is a uniform black, suggesting that the photo was taken in a dark environment, likely at night. There are no contextual clues or additional elements that provide further information about the location or time of the photograph.
+
+9. **Lighting and Shadows**:
+   - The lighting in the image is focused on the moon, highlighting its surface features. The contrast between the illuminated and shadowed parts of the moon is stark, with the dark areas appearing almost black against the bright lunar surface.
+
+10. **Additional Details**:
+    - The image appears to be a photograph rather than an artistic rendering or a digital creation. The clarity and detail suggest that it was taken with a high-quality camera or telescope.
+
+In summary, the image is a clear and detailed photograph of the moon in a crescent phase against a black night sky. The moon's texture and the contrast between its illuminated and shadowed areas are the main focal points of the image."""
 
 images = pipe(prompt=prompt).images[0]
 images.save("test.png")
