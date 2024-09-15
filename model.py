@@ -10,7 +10,7 @@ start = time()
 
 
 
-image_path = "./test_images/rubixcube.jpg"
+image_path = "./test_images/moon.jpg"
 # Lossy is highly recommended
 lossless = False
 
