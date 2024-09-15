@@ -4,6 +4,11 @@ import base64
 from PIL import Image
 
 
+from time import time
+start = time()
+
+
+
 
 image_path = "./test_images/rubixcube.jpg"
 # Lossy is highly recommended
@@ -21,8 +26,11 @@ llm = Llama(
     chat_handler=chat_handler,
     n_ctx=4906,  # n_ctx should be increased to accommodate the image embedding
     verbose=True,
-    n_threads=8
+    # n_threads=16,
+
 )
+
+#83 seconds with 16 cores
 
 data_uri = image_to_base64_data_uri(image_path)
 
@@ -109,3 +117,7 @@ print("WRITING TO FILE...")
 with open("test.imagine", "w+") as f:
     f.write(description + " -- The RGB colors you must use in the image are the following: " + str(colors))
 print("OPERATION COMPLETED SUCCESSFULLY")
+
+
+end = time()
+print(f"EXECUTED IN {end-start} SECONDS")
