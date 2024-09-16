@@ -1,18 +1,19 @@
 from transformers import Qwen2VLForConditionalGeneration, AutoTokenizer, AutoProcessor
 from qwen_vl_utils import process_vision_info
+import torch
 
-# default: Load the model on the available device(s)
-model = Qwen2VLForConditionalGeneration.from_pretrained(
-    "Qwen/Qwen2-VL-7B-Instruct-GPTQ-Int8", torch_dtype="auto", device_map="auto"
-)
+# # default: Load the model on the available device(s)
+# model = Qwen2VLForConditionalGeneration.from_pretrained(
+#     "Qwen/Qwen2-VL-7B-Instruct-GPTQ-Int8", torch_dtype="auto", device_map="auto"
+# )
 
 # We recommend enabling flash_attention_2 for better acceleration and memory saving, especially in multi-image and video scenarios.
-# model = Qwen2VLForConditionalGeneration.from_pretrained(
-#     "Qwen/Qwen2-VL-7B-Instruct-GPTQ-Int8",
-#     torch_dtype=torch.bfloat16,
-#     attn_implementation="flash_attention_2",
-#     device_map="auto",
-# )
+model = Qwen2VLForConditionalGeneration.from_pretrained(
+    "Qwen/Qwen2-VL-7B-Instruct-GPTQ-Int8",
+    torch_dtype=torch.bfloat16,
+    attn_implementation="flash_attention_2",
+    device_map="auto"
+)
 
 # default processer
 processor = AutoProcessor.from_pretrained("Qwen/Qwen2-VL-7B-Instruct-GPTQ-Int8")
