@@ -2,12 +2,8 @@ from llama_cpp import Llama
 from llama_cpp.llama_chat_format import MiniCPMv26ChatHandler
 import base64
 from PIL import Image
-
-
 from time import time
 start = time()
-
-
 
 
 image_path = "./test_images/moon.jpg"
