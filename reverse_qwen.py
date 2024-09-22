@@ -9,7 +9,7 @@ import torch
 # We recommend enabling flash_attention_2 for better acceleration and memory saving, especially in multi-image and video scenarios.
 model = Qwen2VLForConditionalGeneration.from_pretrained(
     "Qwen/Qwen2-VL-7B-Instruct-GPTQ-Int4",
-    torch_dtype=torch.bfloat16,
+    torch_dtype=torch.float16,
     attn_implementation="flash_attention_2",
     device_map="cuda",
 )
